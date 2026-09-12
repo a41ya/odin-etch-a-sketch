@@ -19,3 +19,32 @@ function changeCellColor (event){
     event.target.style.backgroundColor = "pink";
   }
 }
+
+//pop ups for grid size and color
+const gridBtn = document.querySelector("#gridBtn");
+const colorBtn = document.querySelector("#colorBtn");
+
+const gridPopUp = document.querySelector("#gridPopUp");
+const colorPopUp = document.querySelector("#colorPopUp");
+const closeBtnGrid = document.querySelector("#closeBtnGrid")
+const closeBtnColor = document.querySelector("#closeBtnColor")
+
+gridBtn.addEventListener("click", showGridPopUp);
+closeBtnGrid.addEventListener("click", () =>{
+  gridPopUp.close();
+})
+
+colorBtn.addEventListener("click", showColorPopUp);
+closeBtnColor.addEventListener("click", () =>{
+  colorPopUp.close();
+})
+
+function showGridPopUp (){
+  gridPopUp.showModal();
+  
+}
+
+function showColorPopUp (){
+  colorPopUp.showModal();
+  
+}
