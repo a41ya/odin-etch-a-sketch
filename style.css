@@ -17,5 +17,23 @@
   display: flex;
   width: 32px;
   aspect-ratio: 1 / 1;
-  border: 0.1px solid rgba(194, 194, 194, 0.5);
+  border: 0.1px solid rgba(177, 177, 177, 0.777);
+}
+
+#center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 100px 0;
+}
+
+#title{
+  margin: 40px 0;
+  font-family: monospace;
+  font-size: 32px;
 }
