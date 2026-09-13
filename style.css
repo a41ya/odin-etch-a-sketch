@@ -52,3 +52,67 @@
   display: flex;
   gap: 20px;
 }
+
+#popUps{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gridPopUp,
+#colorPopUp{
+  border: none;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  inset: 0;
+  margin: auto;
+
+  width: 400px;
+  height: 210px;
+}
+
+#gridPopUpDiv {
+
+}
+
+#colorPopUpDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  align-items: stretch;
+}
+
+#closeBtnColor{
+  margin-top: 10px;
+  max-width: 140px;
+  align-self: center;
+}
+#closeBtnColor:hover{
+  border: 0.1px solid rgba(255, 255, 255, 0.584);
+  box-shadow: 0 1px 4px rgba(74, 74, 74, 0.371);
+}
+#closeBtnColor:active{
+  border: 0.1px solid white;
+}
+
+.color,
+#closeBtnColor{
+  border: 0.2px solid rgba(63, 63, 63, 0.443);
+  padding: 4px 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(229, 229, 229, 0.374);
+}
+#blackColor:hover{
+  background-color: black;
+  color: white;
+}
+#pinkColor:hover{
+  background-color: pink;
+}
+#rainbow:hover{
+  background: linear-gradient(135deg, #ff0055, #ff9900, #33cc33, #0099ff, #7700aa);
+}

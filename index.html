@@ -22,15 +22,26 @@
     </div>
 
     <!-- pop-ups -->
-    <dialog id="gridPopUp">
-      <p>grid pop up</p>
-      <button id="closeBtnGrid">x</button>
-    </dialog>
+     <div id="popUps">
+      <dialog id="gridPopUp">
+        <div id="gridPopUpDiv">
+          <p>choose grid size</p>
+          <input type="number" min="1" max="100" name="" id="">
+          <button>submit</button>
+          <button id="closeBtnGrid">x</button>
+        </div>
+      </dialog>
 
-    <dialog id="colorPopUp">
-      <p>color picker</p>
-      <button id="closeBtnColor">x</button>
-    </dialog>
+      <dialog id="colorPopUp">
+        <div id="colorPopUpDiv">
+          <p id="colorTitle">color picker</p>
+          <button id="blackColor" class="color">black</button>
+          <button id="pinkColor" class="color">pink</button>
+          <button id="rainbow" class="color">rainbow</button>
+          <button id="closeBtnColor">close window</button>
+        </div>
+      </dialog>
+    </div>
   </div>  
 </body>
 </html>
