@@ -1,3 +1,5 @@
+const inputGrid = document.querySelector("#inputGrid");
+const submitBtn = document.querySelector("#submitGrid");
 //
 //grid container
 //
@@ -7,6 +9,12 @@ divCell.classList = "divCell";
 
 let gridSize = 16;
 let gridWidth = 512 / gridSize;
+
+const blackColor = "black";
+const pinkColor = "pink";
+const rainbowColor = "white";
+
+let currentColor = pinkColor;
 
 //create grid loop
 function newGrid(){
@@ -31,9 +39,8 @@ function removeGrid(){
 divContainer.addEventListener("mouseover", changeCellColor);
 
 function changeCellColor (event){
-  console.log(event.target)
   if (event.target.classList.contains("divCell")){
-    event.target.style.backgroundColor = `${pinkColor}`;
+    event.target.style.backgroundColor = `${currentColor}`;
   } 
 }
 
@@ -79,21 +86,27 @@ function showColorPopUp (){
 //
 //change sketch color
 //
-let blackColor = "black";
-let pinkColor = "pink";
-let rainbowColor = "";
+const colorButtons = document.querySelector("#colorButtons")
+colorButtons.addEventListener('click', changeColor)
 
-blackColorBtn.addEventListener('click', changeColor)
 
-function changeColor(){
+function changeColor(event){
+  colorPopUp.close();
+  
+  if (event.target.id === "blackColor"){
+    currentColor = blackColor;
+  } else if (event.target.id === "pinkColor"){
+    currentColor = pinkColor;
+  } else if (event.target.id === "rainbow"){
+    currentColor = rainbowColor;
+  }
   
 }
 
 //
 //change grid size
 //
-const inputGrid = document.querySelector("#inputGrid");
-const submitBtn = document.querySelector("#submitGrid");
+
 
 function changeGridSize (){
  if(inputGrid.value > 100 || inputGrid.value < 1){
