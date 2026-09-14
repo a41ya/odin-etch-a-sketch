@@ -12,7 +12,14 @@ let gridWidth = 512 / gridSize;
 
 const blackColor = "black";
 const pinkColor = "pink";
-const rainbowColor = "white";
+const rainbowColor = "";
+
+function randomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
 let currentColor = pinkColor;
 
@@ -39,7 +46,12 @@ function removeGrid(){
 divContainer.addEventListener("mouseover", changeCellColor);
 
 function changeCellColor (event){
-  if (event.target.classList.contains("divCell")){
+  if (!event.target.classList.contains("divCell")){
+    return;
+  }
+  if (currentColor === rainbowColor) {
+    event.target.style.backgroundColor = randomRGB();
+  } else {
     event.target.style.backgroundColor = `${currentColor}`;
   } 
 }
